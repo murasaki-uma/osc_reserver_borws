@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.js"   integrity="sha256-5i/mQ300M779N2OVDrl16lbohwXNUdzL/R2aVUXyXWA="   crossorigin="anonymous"></script>
+    <script>
+        var socket = io();
+        socket.on('msg', (msg) => {
+           console.log(msg);
+           $('#msg').text(msg);
+        });
+    </script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <p id="msg"></p>
+</head>
+<body>
+
+</body>
+</html>
